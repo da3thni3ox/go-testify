@@ -59,7 +59,7 @@ func TestMainHandlerCorrectResponse(t *testing.T) {
 
 	require.NoError(t, err)
 	assert.Equal(t, http.StatusOK, responseRecorder.Code)
-	assert.NotEqual(t, responseRecorder.Body, nil)
+	assert.NotEmpty(t, responseRecorder.Body)
 }
 
 // В запросе передается город которого нет в списке
